@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>홈 | UNIENS 유엔아이엔스</title>
+  <meta name="description" content="유엔아이엔스는 병원 수탁 방식의 의료기기 유통을 전문으로 하는 기업입니다." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <style>
+  /* ── 핵심 가치 카드 오버라이드 ── */
+  .values-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  @media (max-width: 768px) {
+    .values-grid { grid-template-columns: 1fr; }
+  }
+  .value-card {
+    position: relative;
+    height: 320px;
+    border-radius: 16px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+    transform-style: preserve-3d;
+  }
+  .value-card__bg {
+    position: absolute; inset: 0;
+    background-size: cover; background-position: center;
+    transition: transform 0.5s ease;
+  }
+  .value-card:hover .value-card__bg { transform: scale(1.06); }
+  .value-card__overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.45) 100%);
+    transition: background 0.35s ease;
+  }
+  .value-card:hover .value-card__overlay {
+    background: linear-gradient(to bottom, rgba(0,10,30,0.70) 0%, rgba(0,10,30,0.95) 100%);
+  }
+  .value-card__content {
+    position: absolute; inset: 0;
+    padding: 28px; display: flex; flex-direction: column; justify-content: flex-end; color: #fff;
+  }
+  .value-card__num { font-size: 11px; font-weight: 700; letter-spacing: 0.15em; color: rgba(255,255,255,0.75) !important; margin-bottom: 6px; }
+  .value-card__title { font-size: 22px; font-weight: 800; color: #fff !important; margin-bottom: 10px; text-shadow: 0 2px 12px rgba(0,0,0,0.8); letter-spacing: -0.3px; }
+  .value-card__text {
+    font-size: 13.5px; line-height: 1.85; color: #fff !important;
+    opacity: 0; transform: translateY(10px);
+    transition: opacity 0.35s ease, transform 0.35s ease;
+    text-shadow: 0 1px 6px rgba(0,0,0,0.6); font-weight: 500; word-break: keep-all;
+  }
+  .value-card:hover .value-card__text { opacity: 1; transform: translateY(0); }
+  .value-card__icon {
+    position: absolute; top: 24px; left: 28px;
+    width: 52px; height: 52px;
+    background: rgba(255,255,255,0.15); border-radius: 12px; backdrop-filter: blur(4px);
+    display: flex; align-items: center; justify-content: center;
+    transition: background 0.3s ease;
+  }
+  .value-card:hover .value-card__icon { background: rgba(255,255,255,0.25); }
+
+  /* ── CTA 글씨 흰색 ── */
+  .cta-card__label, .cta-card__title, .cta-card__desc { color: #fff !important; }
+
+  /* ── 히어로 슬라이더 ── */
+  .hero { position: relative; overflow: hidden; }
+  .hero-slides { position: absolute; inset: 0; z-index: 0; }
+  .hero-slide { position: absolute; inset: 0; background-size: cover; background-position: center; opacity: 0; transition: opacity 1.2s ease; }
+  .hero-slide.active { opacity: 1; }
+  .hero-slides::after { content: ''; position: absolute; inset: 0; background: rgba(0,10,30,0.55); z-index: 1; }
+  .hero__content { position: relative; z-index: 2; }
+  .hero-dots { position: absolute; bottom: 24px; left: 50%; transform: translateX(-50%); display: flex; gap: 8px; z-index: 3; }
+  .hero-dot { width: 8px; height: 8px; border-radius: 50%; background: rgba(255,255,255,0.4); border: none; cursor: pointer; transition: background 0.3s ease, transform 0.3s ease; padding: 0; }
+  .hero-dot.active { background: #fff; transform: scale(1.3); }
+  </style>
+</head>
+<body>
+<div class="layout-wrap">
+
+  <div id="layout-header"></div>
+
+  <main id="layout-main">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-slides">
+        <div class="hero-slide active" style="background-image: url('http://uni6341.img6.kr/Uniens/pagedesign/images/%EC%8B%A0%EB%A2%B0.png');"></div>
+        <div class="hero-slide" style="background-image: url('http://uni6341.img6.kr/Uniens/pagedesign/images/%EC%A0%84%EB%AC%B8%EC%84%B1.png');"></div>
+        <div class="hero-slide" style="background-image: url('http://uni6341.img6.kr/Uniens/pagedesign/images/%ED%8C%8C%ED%8A%B8%EB%84%88%EC%89%BD.png');"></div>
+      </div>
+      <div class="hero-dots">
+        <button class="hero-dot active" data-index="0"></button>
+        <button class="hero-dot" data-index="1"></button>
+        <button class="hero-dot" data-index="2"></button>
+      </div>
+      <div class="container hero__content">
+        <span class="hero__eyebrow">Medical Device Distribution</span>
+        <h1 class="hero__title">
+          병원과 함께하는<br>
+          <strong>신뢰할 수 있는</strong><br>의료기기 파트너
+        </h1>
+        <p class="hero__desc">
+          유엔아이엔스는 병원 수탁 방식의 의료기기 유통을 전문으로 합니다.<br>
+          국내 주요 병원과의 긴밀한 파트너십으로 검증된 제품을 공급합니다.
+        </p>
+        <div class="hero__actions">
+          <a href="/about.html" class="btn btn--primary">회사소개</a>
+          <a href="/products.html" class="btn btn--outline">제품소개</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 통계 스트립 -->
+    <section class="stats-strip">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-item reveal">
+            <div class="stat-item__num">20<sup style="font-size:.9rem">+</sup></div>
+            <div class="stat-item__label">거래 병원</div>
+          </div>
+          <div class="stat-item reveal" style="transition-delay:.06s">
+            <div class="stat-item__num">3</div>
+            <div class="stat-item__label">제품 카테고리</div>
+          </div>
+          <div class="stat-item reveal" style="transition-delay:.12s">
+            <div class="stat-item__num">100<sup style="font-size:.9rem">%</sup></div>
+            <div class="stat-item__label">허가 인증 제품</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 핵심 가치 -->
+    <section class="section section--gray">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">유엔아이엔스의 핵심 가치</h2>
+          <span class="section-rule"></span>
+          <p class="section-subtitle" style="margin-top:16px;">저희가 의료기기 유통에서 변함없이 지키는 세 가지 원칙입니다.</p>
+        </div>
+        <div class="values-grid">
+          <div class="value-card reveal">
+            <div class="value-card__bg" style="background-image: url('http://uni6341.img6.kr/Uniens/pagedesign/images/%EC%8B%A0%EB%A2%B0.png');"></div>
+            <div class="value-card__overlay"></div>
+            <div class="value-card__content">
+              <div class="value-card__num">01</div>
+              <h3 class="value-card__title">신뢰성</h3>
+              <p class="value-card__text">식품의약품안전처 허가를 받은 검증된 의료기기만을 취급합니다. 엄격한 품질 기준과 유통 이력 관리로 병원의 신뢰를 얻고 있습니다.</p>
+            </div>
+          </div>
+          <div class="value-card reveal" style="transition-delay:.08s">
+            <div class="value-card__bg" style="background-image: url('http://uni6341.img6.kr/Uniens/pagedesign/images/%EC%A0%84%EB%AC%B8%EC%84%B1.png');"></div>
+            <div class="value-card__overlay"></div>
+            <div class="value-card__content">
+              <div class="value-card__num">02</div>
+              <h3 class="value-card__title">전문성</h3>
+              <p class="value-card__text">병원 수탁·위탁 방식에 특화된 전문 서비스를 제공합니다. 병원의 재고 부담을 줄이고 실제 사용 시 정산하는 유연한 공급 방식을 운영합니다.</p>
+            </div>
+          </div>
+          <div class="value-card reveal" style="transition-delay:.16s">
+            <div class="value-card__bg" style="background-image: url('http://uni6341.img6.kr/Uniens/pagedesign/images/%ED%8C%8C%ED%8A%B8%EB%84%88%EC%89%BD.png');"></div>
+            <div class="value-card__overlay"></div>
+            <div class="value-card__content">
+              <div class="value-card__num">03</div>
+              <h3 class="value-card__title">파트너십</h3>
+              <p class="value-card__text">현재 국내 약 20개 병원과 파트너십을 맺고 있습니다. 단순 납품을 넘어 병원의 운영 효율화에 기여하는 장기적 협력 관계를 추구합니다.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA 바로가기 -->
+    <section style="padding:0;">
+      <div style="max-width:100%; padding:0;">
+        <div class="cta-grid">
+          <a href="/about.html" class="cta-card cta-card--navy reveal">
+            <p class="cta-card__label">About</p>
+            <h3 class="cta-card__title">회사소개</h3>
+            <p class="cta-card__desc">유엔아이엔스의 연혁, 사업 방식,<br>인증 현황과 오시는 길을 확인하세요.</p>
+            <span class="btn btn--outline">자세히 보기 →</span>
+          </a>
+          <a href="/products.html" class="cta-card cta-card--blue reveal" style="transition-delay:.08s">
+            <p class="cta-card__label">Products</p>
+            <h3 class="cta-card__title">제품소개</h3>
+            <p class="cta-card__desc">수술용 기기, 진단 장비,<br>소모성 의료용품 라인업을 확인하세요.</p>
+            <span class="btn btn--outline">제품 보기 →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="layout-footer"></div>
+
+</div>
+
+<script src="/js/components.js"></script>
+<script src="/js/main.js"></script>
+<script>
+  initPage('home');
+
+  /* ── 히어로 슬라이더 ── */
+  const slides = document.querySelectorAll('.hero-slide');
+  const dots   = document.querySelectorAll('.hero-dot');
+  let current  = 0;
+  let timer;
+
+  function goTo(index) {
+    slides[current].classList.remove('active');
+    dots[current].classList.remove('active');
+    current = index;
+    slides[current].classList.add('active');
+    dots[current].classList.add('active');
+  }
+  function next() { goTo((current + 1) % slides.length); }
+  function startAuto() { timer = setInterval(next, 5000); }
+
+  dots.forEach(dot => {
+    dot.addEventListener('click', () => {
+      clearInterval(timer);
+      goTo(Number(dot.dataset.index));
+      startAuto();
+    });
+  });
+  startAuto();
+
+  /* ── 핵심 가치 카드 틸트 효과 ── */
+  document.querySelectorAll('.value-card').forEach(card => {
+    card.addEventListener('mousemove', e => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      const cx = rect.width / 2;
+      const cy = rect.height / 2;
+      const rotateX = ((y - cy) / cy) * -6;
+      const rotateY = ((x - cx) / cx) * 6;
+      card.style.transform = `perspective(800px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.02)`;
+      card.style.transition = 'transform 0.1s ease';
+    });
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = 'perspective(800px) rotateX(0deg) rotateY(0deg) scale(1)';
+      card.style.transition = 'transform 0.4s ease';
+    });
+  });
+</script>
+</body>
+</html>

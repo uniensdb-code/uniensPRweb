@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>New Air Filter | UNIENS 유엔아이엔스</title>
+  <meta name="description" content="수술 시 발생하는 연기를 제거하는 연기흡입기용 필터 — UNIENS 유엔아이엔스" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --primary:#0A2342; --accent:#1A5FA8; --accent-dk:#144D8C; --accent-lt:#E8F0FB;
+      --white:#FFFFFF; --light:#F7F9FC; --border:#D8E0EB; --text:#1A2E44; --muted:#5A6F85;
+      --font:'Noto Sans KR', sans-serif; --radius:4px;
+    }
+    body { font-family:var(--font); background:var(--light); color:var(--text); line-height:1.7; font-size:15px; -webkit-font-smoothing:antialiased; }
+    img  { max-width:100%; display:block; }
+    a    { color:inherit; text-decoration:none; }
+
+    /* 공통 헤더/푸터 영역 */
+    .layout-wrap { display:flex; flex-direction:column; min-height:100vh; }
+    #layout-header { flex-shrink:0; }
+    #layout-main   { flex:1; }
+    #layout-footer { flex-shrink:0; }
+
+    .prod-hero { background:var(--primary); padding:56px 40px 48px; border-bottom:3px solid var(--accent); position:relative; overflow:hidden; }
+    .prod-hero::after { content:''; position:absolute; bottom:0; right:0; width:280px; height:100%; background:rgba(255,255,255,.03); clip-path:polygon(40% 0,100% 0,100% 100%,0 100%); pointer-events:none; }
+    .hero-inner { max-width:900px; margin:0 auto; position:relative; }
+    .hero-eyebrow { display:inline-block; font-size:.72rem; font-weight:700; letter-spacing:.18em; text-transform:uppercase; color:#7FB3E8 !important; margin-bottom:14px; border-left:3px solid var(--accent); padding-left:10px; }
+    .hero-title { font-size:clamp(2rem,5vw,3rem); font-weight:800; color:#fff !important; letter-spacing:-0.03em; line-height:1.1; margin-bottom:10px; }
+    .hero-sub { font-size:.95rem; color:rgba(255,255,255,.6) !important; font-weight:400; letter-spacing:.03em; }
+    .hero-tag { display:inline-block; margin-top:14px; background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.15); color:rgba(255,255,255,.65) !important; font-size:.75rem; padding:4px 12px; border-radius:var(--radius); letter-spacing:.04em; }
+
+    .page { max-width:900px; margin:0 auto; padding:40px 20px 64px; }
+    .top-section { display:grid; grid-template-columns:1fr 1fr; gap:20px; margin-bottom:24px; }
+    @media (max-width:640px) { .top-section { grid-template-columns:1fr; } }
+
+    .product-img-box { background:var(--white); border:1px solid var(--border); border-radius:var(--radius); padding:32px; display:flex; align-items:center; justify-content:center; min-height:220px; }
+    .product-img-box img { width:100%; height:auto; object-fit:contain; }
+
+    .spec-box { background:var(--white); border:1px solid var(--border); border-radius:var(--radius); overflow:hidden; }
+    .spec-box table { width:100%; border-collapse:collapse; }
+    .spec-box td { padding:11px 16px; font-size:.85rem; border-bottom:1px solid var(--border); vertical-align:top; }
+    .spec-box tr:last-child td { border-bottom:none; }
+    .spec-box td:first-child { color:var(--muted); width:120px; font-weight:500; background:var(--light); border-right:1px solid var(--border); }
+    .spec-box td:last-child { font-weight:500; color:var(--text); }
+
+    .desc-box { background:var(--primary); border-left:4px solid var(--accent); border-radius:0 var(--radius) var(--radius) 0; padding:18px 22px; font-size:.9rem; color:rgba(255,255,255,.75) !important; line-height:1.85; margin-bottom:28px; }
+
+    .section { margin-bottom:32px; }
+    .section-title { font-size:.92rem; font-weight:800; color:var(--primary) !important; padding-bottom:10px; border-bottom:2px solid var(--accent); margin-bottom:16px; display:flex; align-items:center; gap:8px; }
+    .section-title::before { content:''; display:inline-block; width:4px; height:16px; background:var(--accent); flex-shrink:0; }
+
+    .purpose-list { list-style:none; }
+    .purpose-list li { font-size:.88rem; color:var(--muted); padding:6px 0 6px 18px; position:relative; line-height:1.7; }
+    .purpose-list li::before { content:''; position:absolute; left:0; top:13px; width:6px; height:6px; background:var(--accent); }
+
+    .features-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; }
+    .feature-card { background:var(--white); border:1px solid var(--border); border-radius:var(--radius); padding:16px; text-align:center; transition:box-shadow .2s,transform .2s; }
+    .feature-card:hover { box-shadow:0 4px 20px rgba(10,35,66,.1); transform:translateY(-2px); }
+    .feature-num { display:inline-block; width:26px; height:26px; background:var(--accent); color:#fff !important; font-size:.75rem; font-weight:800; line-height:26px; margin-bottom:8px; }
+    .feature-title { font-size:.82rem; font-weight:700; color:var(--text) !important; margin-bottom:6px; line-height:1.4; }
+    .feature-desc  { font-size:.78rem; color:var(--muted); line-height:1.6; }
+
+    .download-link { display:flex; align-items:center; gap:16px; background:var(--white); border:1px solid var(--border); border-radius:var(--radius); padding:16px 20px; text-decoration:none; color:inherit; transition:box-shadow .2s,transform .2s; }
+    .download-link:hover { box-shadow:0 4px 20px rgba(26,95,168,.12); transform:translateY(-2px); }
+    .download-icon { width:44px; height:44px; background:var(--accent-lt); border:1px solid #C2D8F0; border-radius:var(--radius); display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+    .download-info { flex:1; }
+    .download-info .fname { font-size:.88rem; font-weight:700; color:var(--text) !important; margin-bottom:3px; }
+    .download-info .fsub  { font-size:.75rem; color:var(--muted); }
+    .download-badge { font-size:.75rem; font-weight:700; color:var(--accent) !important; background:var(--accent-lt); padding:4px 12px; border:1px solid #C2D8F0; white-space:nowrap; }
+
+    .contact-bar { background:var(--primary); color:rgba(255,255,255,.65) !important; border-radius:var(--radius); padding:18px 24px; font-size:.85rem; display:flex; flex-wrap:wrap; gap:16px; align-items:center; margin-top:8px; }
+    .contact-bar strong { color:#fff !important; font-weight:700; }
+    .contact-divider { color:rgba(255,255,255,.2); }
+
+    .back-link { display:inline-flex; align-items:center; gap:6px; font-size:.82rem; color:var(--muted); margin-bottom:24px; }
+    .back-link:hover { color:var(--accent); }
+  </style>
+</head>
+<body>
+<div class="layout-wrap">
+  <div id="layout-header"></div>
+
+  <main id="layout-main">
+    <div class="prod-hero">
+      <div class="hero-inner">
+        <span class="hero-eyebrow">Medical Device · 연기흡입기용필터</span>
+        <h1 class="hero-title">NEW AIR FILTER</h1>
+        <p class="hero-sub">Surgical Smoke Evacuation Filter</p>
+        <span class="hero-tag">일회용 의료기기 &nbsp;|&nbsp; 비급여</span>
+      </div>
+    </div>
+
+    <div class="page">
+      <a href="/products.html" class="back-link">← 제품소개로 돌아가기</a>
+
+      <div class="top-section">
+        <div class="product-img-box">
+          <img src="http://uni6341.img6.kr/Uniens/pagedesign/images/newairfiltrer.jpg" alt="New Air Filter 제품 이미지">
+        </div>
+        <div class="spec-box">
+          <table>
+            <tr><td>품목명</td><td>연기흡입기용필터</td></tr>
+            <tr><td>허가번호</td><td>제인 22-49328 호</td></tr>
+            <tr><td>모델/규격</td><td>UNI-RSF / EA</td></tr>
+            <tr><td>제조의뢰자</td><td>(주)유엔아이엔스</td></tr>
+            <tr><td>보관방법</td><td>실온 보관 (직사광선 피할 것)</td></tr>
+            <tr><td>의료보험</td><td>비급여</td></tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="desc-box">
+        수술 시 발생하는 연기를 제거하여 수술자의 시야를 확보하고, 수술실 환경을 개선하기 위하여 사용하는 연기 흡입기용 필터입니다. 복압을 이용한 연기 흡입 원리를 적용하여 효과적으로 유해 물질을 차단합니다.
+      </div>
+
+      <div class="section">
+        <div class="section-title">사용 목적</div>
+        <ul class="purpose-list">
+          <li>수술 시 발생하는 연기를 제거하여 수술자의 시야를 확보</li>
+          <li>복압을 이용한 연기 흡입 원리 적용</li>
+          <li>암모니아 탈취율 60% 이상</li>
+          <li>수술실 환경 개선</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <div class="section-title">제품의 특성</div>
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-num">1</div>
+            <div class="feature-title">고흡수성 수지<br><span style="font-weight:400;color:var(--muted);font-size:.72rem;">SAP</span></div>
+            <div class="feature-desc">기화된 수분(증기)을 효과적으로 흡수·제거합니다.</div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-num">2</div>
+            <div class="feature-title">스테인리스 타공판<br><span style="font-weight:400;color:var(--muted);font-size:.72rem;">Perforated Plate</span></div>
+            <div class="feature-desc">내구성이 우수하며 유증기를 흡착·제거합니다.</div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-num">3</div>
+            <div class="feature-title">활성탄 필터<br><span style="font-weight:400;color:var(--muted);font-size:.72rem;">Activated Carbon</span></div>
+            <div class="feature-desc">유해 물질 및 악취를 효과적으로 제거합니다.</div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-num">4</div>
+            <div class="feature-title">초미세먼지 차단<br><span style="font-weight:400;color:var(--muted);font-size:.72rem;">HEPA H13</span></div>
+            <div class="feature-desc">0.3μm 입자를 99.9% 차단. 방사형 구조로 통기성 우수.</div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-num">5</div>
+            <div class="feature-title">흐름 조절 스위치<br><span style="font-weight:400;color:var(--muted);font-size:.72rem;">Switch</span></div>
+            <div class="feature-desc">수술 상황에 따라 연기 흐름을 편리하게 조절합니다.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">자료 다운로드</div>
+        <a class="download-link" href="http://uni6341.img6.kr/Uniens/pagedesign/pdf/airfiltercatalog.pdf" download>
+          <div class="download-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1A5FA8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+              <polyline points="14 2 14 8 20 8"/>
+              <line x1="12" y1="11" x2="12" y2="17"/>
+              <polyline points="9 14 12 17 15 14"/>
+            </svg>
+          </div>
+          <div class="download-info">
+            <div class="fname">유엔아이엔스 필터 카탈로그.pdf</div>
+            <div class="fsub">클릭하여 다운로드</div>
+          </div>
+          <div class="download-badge">DOWNLOAD</div>
+        </a>
+      </div>
+
+      <div class="contact-bar">
+        <span>제조의뢰자&nbsp;<strong>(주)유엔아이엔스</strong></span>
+        <span class="contact-divider">|</span>
+        <span>Tel&nbsp;<strong>02-402-6341</strong></span>
+        <span class="contact-divider">|</span>
+        <span>Fax&nbsp;<strong>02-402-6342</strong></span>
+      </div>
+    </div>
+  </main>
+
+  <div id="layout-footer"></div>
+</div>
+
+<script src="/js/components.js"></script>
+<script src="/js/main.js"></script>
+<script>initPage('products');</script>
+</body>
+</html>

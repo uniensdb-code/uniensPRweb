@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>X BLOCK 엑스블럭 | UNIENS 유엔아이엔스</title>
+  <meta name="description" content="척추 수술 후 경막 주위 유착을 예방하는 유착방지피복재 — UNIENS 유엔아이엔스" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
+    :root { --primary:#0A2342; --accent:#1A5FA8; --accent-lt:#E8F0FB; --white:#FFFFFF; --light:#F7F9FC; --border:#D8E0EB; --text:#1A2E44; --muted:#5A6F85; --font:'Noto Sans KR',sans-serif; --radius:4px; }
+    body { font-family:var(--font); background:var(--light); color:var(--text); line-height:1.7; font-size:15px; -webkit-font-smoothing:antialiased; }
+    img { max-width:100%; display:block; } a { color:inherit; text-decoration:none; }
+    .layout-wrap { display:flex; flex-direction:column; min-height:100vh; }
+    #layout-header { flex-shrink:0; } #layout-main { flex:1; } #layout-footer { flex-shrink:0; }
+
+    .prod-hero { background:var(--primary); padding:56px 40px 48px; border-bottom:3px solid var(--accent); position:relative; overflow:hidden; }
+    .prod-hero::after { content:''; position:absolute; bottom:0; right:0; width:280px; height:100%; background:rgba(255,255,255,.03); clip-path:polygon(40% 0,100% 0,100% 100%,0 100%); pointer-events:none; }
+    .hero-inner { max-width:900px; margin:0 auto; position:relative; }
+    .hero-eyebrow { display:inline-block; font-size:.72rem; font-weight:700; letter-spacing:.18em; text-transform:uppercase; color:#7FB3E8 !important; margin-bottom:14px; border-left:3px solid var(--accent); padding-left:10px; }
+    .hero-title { font-size:clamp(2rem,5vw,3rem); font-weight:800; color:#fff !important; letter-spacing:-0.03em; line-height:1.1; margin-bottom:10px; }
+    .hero-title span { color:#7FB3E8 !important; }
+    .hero-sub { font-size:.95rem; color:rgba(255,255,255,.6) !important; font-weight:400; letter-spacing:.03em; }
+    .hero-tag { display:inline-block; margin-top:14px; background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.15); color:rgba(255,255,255,.65) !important; font-size:.75rem; padding:4px 12px; border-radius:var(--radius); letter-spacing:.04em; }
+
+    .page { max-width:900px; margin:0 auto; padding:40px 20px 64px; }
+    .top-section { display:grid; grid-template-columns:1fr 1fr; gap:20px; margin-bottom:24px; }
+    @media (max-width:640px) { .top-section { grid-template-columns:1fr; } }
+
+    .product-img-box { background:var(--white); border:1px solid var(--border); border-radius:var(--radius); padding:32px; display:flex; align-items:center; justify-content:center; min-height:220px; position:relative; overflow:hidden; }
+    .product-img-box img { width:100%; height:auto; object-fit:contain; position:relative; z-index:1; }
+
+    .spec-box { background:var(--white); border:1px solid var(--border); border-radius:var(--radius); overflow:hidden; }
+    .spec-box table { width:100%; border-collapse:collapse; }
+    .spec-box td { padding:11px 16px; font-size:.85rem; border-bottom:1px solid var(--border); vertical-align:top; }
+    .spec-box tr:last-child td { border-bottom:none; }
+    .spec-box td:first-child { color:var(--muted); width:130px; font-weight:500; background:var(--light); border-right:1px solid var(--border); }
+    .spec-box td:last-child { font-weight:500; color:var(--text); }
+
+    .badge-nopay { display:inline-block; background:#FFF4E5; color:#B85C00 !important; font-size:.72rem; font-weight:700; padding:2px 8px; border:1px solid #F5C48A; }
+    .badge-single { display:inline-block; background:var(--accent-lt); color:var(--accent) !important; font-size:.72rem; font-weight:700; padding:2px 8px; border:1px solid #C2D8F0; margin-right:4px; }
+
+    .desc-box { background:var(--primary); border-left:4px solid var(--accent); border-radius:0 var(--radius) var(--radius) 0; padding:18px 22px; font-size:.9rem; color:rgba(255,255,255,.75) !important; line-height:1.85; margin-bottom:28px; }
+
+    .simple-spec { margin-bottom:28px; }
+    .simple-spec p { font-size:.88rem; color:var(--muted); padding:3px 0; line-height:1.8; }
+    .simple-spec p strong { color:var(--text) !important; font-weight:700; }
+
+    .dl-label { font-size:.82rem; color:var(--muted); margin-bottom:10px; display:flex; align-items:center; gap:6px; }
+    .dl-label::before { content:'▼'; font-size:.65rem; color:var(--accent); }
+
+    .download-card { display:flex; align-items:center; gap:16px; background:var(--white); border:1px solid var(--border); border-radius:var(--radius); padding:16px 20px; text-decoration:none; color:inherit; transition:box-shadow .2s,transform .2s; margin-bottom:8px; }
+    .download-card:hover { box-shadow:0 4px 20px rgba(26,95,168,.12); transform:translateY(-2px); }
+    .dl-icon { width:44px; height:44px; background:var(--accent-lt); border:1px solid #C2D8F0; border-radius:var(--radius); display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+    .dl-info { flex:1; }
+    .dl-fname { font-size:.88rem; font-weight:700; color:var(--text) !important; margin-bottom:3px; }
+    .dl-meta  { font-size:.75rem; color:var(--muted); }
+    .dl-badge { font-size:.75rem; font-weight:700; color:var(--accent) !important; background:var(--accent-lt); padding:4px 12px; border:1px solid #C2D8F0; white-space:nowrap; }
+
+    .back-link { display:inline-flex; align-items:center; gap:6px; font-size:.82rem; color:var(--muted); margin-bottom:24px; }
+    .back-link:hover { color:var(--accent); }
+  </style>
+</head>
+<body>
+<div class="layout-wrap">
+  <div id="layout-header"></div>
+
+  <main id="layout-main">
+    <div class="prod-hero">
+      <div class="hero-inner">
+        <span class="hero-eyebrow">Medical Device · 유착방지피복재</span>
+        <h1 class="hero-title">X <span>BLOCK</span></h1>
+        <p class="hero-sub">The Ultimate Barrier Against Adhesion · 엑스블럭</p>
+        <span class="hero-tag">일회용 의료기기 &nbsp;|&nbsp; 재사용 금지 &nbsp;|&nbsp; 비급여 BF0101WC</span>
+      </div>
+    </div>
+
+    <div class="page">
+      <a href="/products.html" class="back-link">← 제품소개로 돌아가기</a>
+
+      <div class="top-section">
+        <div class="product-img-box">
+          <img src="http://uni6341.img6.kr/Uniens/pagedesign/images/xblockpage.jpg" alt="X BLOCK">
+        </div>
+        <div class="spec-box">
+          <table>
+            <tr><td>제품명</td><td>엑스블럭 (X BLOCK)</td></tr>
+            <tr><td>품목명</td><td>유착방지피복재</td></tr>
+            <tr><td>허가번호</td><td>제허 13-1120 호</td></tr>
+            <tr><td>분류번호(등급)</td><td>B07070.14 (3)</td></tr>
+            <tr><td>모델/용량</td><td>X block 1.5 / 3 / 5 · 1.5, 3.0, 5.0 mL</td></tr>
+            <tr><td>저장/기한</td><td>실온보관 (1~30℃) · 제조일로부터 3년</td></tr>
+            <tr><td>비고</td><td><span class="badge-single">일회용</span><span class="badge-single">인체이식형</span></td></tr>
+            <tr><td>의료보험</td><td><span class="badge-nopay">비급여 BF0101WC</span></td></tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="desc-box">
+        내·외과적 처치 및 수술 시 척추 수술 후 발생하는 경막 주위 유착을 예방하기 위하여 사용하는 가교 히알루론산(c-HA) 및 고분자 히알루론산(h-HA) 혼합 유착방지피복재
+      </div>
+
+      <div class="simple-spec">
+        <p><strong>품목명 :</strong> 유착방지피복재</p>
+        <p><strong>허가번호 :</strong> 제허 13-1120 호</p>
+        <p><strong>분류번호(등급) :</strong> B07070.14 (3)</p>
+      </div>
+
+      <div class="dl-label">카탈로그 다운로드</div>
+      <a class="download-card" href="http://uni6341.img6.kr/Uniens/pagedesign/pdf/xblockcatalog.pdf" download>
+        <div class="dl-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1A5FA8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+            <polyline points="14 2 14 8 20 8"/>
+            <line x1="12" y1="11" x2="12" y2="17"/>
+            <polyline points="9 14 12 17 15 14"/>
+          </svg>
+        </div>
+        <div class="dl-info">
+          <div class="dl-fname">XBLOCK_CATALOG.pdf &nbsp;<span style="font-size:.75rem;color:var(--muted);">(카탈로그)</span></div>
+          <div class="dl-meta">등록일 : 2024-09-20 &nbsp;|&nbsp; 클릭하여 다운로드</div>
+        </div>
+        <div class="dl-badge">DOWNLOAD</div>
+      </a>
+    </div>
+  </main>
+
+  <div id="layout-footer"></div>
+</div>
+
+<script src="/js/components.js"></script>
+<script src="/js/main.js"></script>
+<script>initPage('products');</script>
+</body>
+</html>
