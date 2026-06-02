@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: YOUR_GITHUB_USERNAME/uniens-website   # ← GitHub 사용자명/레포명으로 변경하세요
+  repo: uniensdb-code/uniensPRweb   # ← GitHub 사용자명/레포명으로 변경하세요
   branch: main
 
 media_folder: "images/uploads"
