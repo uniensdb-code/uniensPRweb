@@ -129,9 +129,11 @@ ul { list-style: none; }
   height: 64px;
 }
 .logo {
-  display: flex; align-items: center;
+  display: flex; align-items: center; gap: 10px;
 }
 .logo img { height: 36px; width: auto; display: block; }
+.logo__text { font-size: 1.45rem; font-weight: 800; color: var(--color-primary); letter-spacing: .16em; }
+.logo__text em { font-style: normal; color: var(--color-accent); }
 
 .nav { display: flex; align-items: center; gap: 0; }
 .nav__link {
