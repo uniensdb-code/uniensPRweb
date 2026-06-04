@@ -129,10 +129,9 @@ ul { list-style: none; }
   height: 64px;
 }
 .logo {
-  font-size: 1.45rem; font-weight: 800;
-  color: var(--color-primary); letter-spacing: .16em;
+  display: flex; align-items: center;
 }
-.logo span { color: var(--color-accent); }
+.logo img { height: 36px; width: auto; display: block; }
 
 .nav { display: flex; align-items: center; gap: 0; }
 .nav__link {

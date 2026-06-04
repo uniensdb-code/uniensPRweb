@@ -25,7 +25,7 @@ function getHeader(activePage) {
   return `
 <header class="header">
   <div class="container header__inner">
-    <a href="/index.html" class="logo">UNI<span>ENS</span></a>
+    <a href="/index.html" class="logo"><img src="/images/logo.jpg" alt="UNIENS 유엔아이엔스" /></a>
     <nav class="nav" aria-label="메인 메뉴">${desktopLinks}</nav>
     <button class="hamburger" aria-label="메뉴 열기" aria-expanded="false">
       <span></span><span></span><span></span>
