@@ -91,6 +91,11 @@ a    { color: inherit; text-decoration: none; }
 .model-table tr:last-child td { border-bottom: none; }
 .model-table tr:nth-child(even) td { background: var(--light); }
 
+/* 사용설명서 이미지 */
+.manual-box { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; }
+.manual-box img { width: 100%; height: auto; }
+@media (max-width: 640px) { .manual-box { padding: 12px; } }
+
 /* 다운로드 카드 */
 .dl-label { font-size: .82rem; color: var(--muted); margin-bottom: 10px; display: flex; align-items: center; gap: 6px; }
 .dl-label::before { content: '▼'; font-size: .65rem; color: var(--accent); }
