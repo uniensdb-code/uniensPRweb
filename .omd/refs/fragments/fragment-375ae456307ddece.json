@@ -1,0 +1,26 @@
+{
+  "schemaVersion": "image-fragment-v1",
+  "id": "fragment-375ae456307ddece",
+  "sha256": "d3a5b30300d162d2098ccdaf87d528c72de9d1a126ce2dc0b22e9eee68092dc2",
+  "imagePath": ".omd/refs/fragments/d3a5b30300d162d2098ccdaf87d528c72de9d1a126ce2dc0b22e9eee68092dc2.png",
+  "provenance": {
+    "sourcePage": "https://icomat.co.uk/",
+    "captureRegion": "Lower segment of the home page: numbered O1 through O7 end-to-end production-process strip, named customer-logo testimonials (BAE Systems, Joby Aviation, NIAR), and a closing stats counter.",
+    "licenseStatus": "restricted",
+    "rightsNotes": "Third-party award-recognized Awwwards B2B manufacturing site captured for internal reference measurement only; not licensed for reuse; no pixels or assets will be shipped.",
+    "capturedAt": "2026-07-23T04:05:28.044Z"
+  },
+  "transfer": {
+    "visualRole": "supporting-component: numbered process strip and named testimonial anatomy for a technical B2B credibility case",
+    "principles": [
+      "Complex technical manufacturing credibility is carried by a numbered O1 through O7 horizontal process strip, one capability per step with a plain numeral plus short label - the same structural idea as UNIENS' own existing four-step consignment settlement flow but proven at a more confident visual scale.",
+      "Named third-party testimonial quotes pairing customer logo, role, and company substitute for stock trust badges - real named evidence over generic claims, directly analogous to what UNIENS' own real license, patent, and GMP numbers already provide.",
+      "A closing numeric stats counter is the single most decorative moment on an otherwise restrained, dense, technical page - confirms one committed signature moment is enough register, not several."
+    ],
+    "geometry": {
+      "width": 1425,
+      "height": 10586,
+      "aspectRatio": 0.1346
+    }
+  }
+}

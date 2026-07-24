@@ -1,0 +1,20 @@
+{
+  "inputPath": ".omd/refs/_captures/cantor8.png",
+  "provenance": {
+    "sourcePage": "https://www.cantor8.io/",
+    "captureRegion": "Full home page: hero statement plus scroll cue, a Trusted by industry leaders partner-logo strip, a lettered and labelled product-suite grid naming each capability category, and a closing CTA and newsletter footer.",
+    "licenseStatus": "restricted",
+    "rightsNotes": "Third-party institutional fintech site, Awwwards business and corporate gallery, agency Artemii Lebedev, captured for internal reference measurement only; not licensed for reuse; no pixels or assets will be shipped.",
+    "capturedAt": "2026-07-23T04:03:24.752Z"
+  },
+  "transfer": {
+    "visualRole": "high-visual-system: sharp thin-line institutional layout anatomy, labelled grid, partner-trust strip, restrained accent",
+    "principles": [
+      "The capability grid uses a short all-caps category label above each card title instead of a decorative icon - a direct anatomy match for a proof-forward reimbursement-code and consignment-tag product-teaser card that UNIENS' own product-card category convention already half-implements.",
+      "A dedicated Trusted by industry leaders partner-logo strip sits directly under the hero, before any product detail - proof is sequenced immediately after the value claim, not deferred to a later section.",
+      "Hairline dividers and a single blue accent line carry all visual structure; there is no rounded-card or drop-shadow softness anywhere, consistent with the straight-line, thin-line, minimal-rounding principle already stated in UNIENS' own stylesheet.",
+      "Motion is restrained to a scroll-cue affordance and on-scroll section reveals - no autoplay carousel or looping animation competes with the credibility content."
+    ],
+    "geometry": { "width": 1280, "height": 11550, "aspectRatio": 0.1108 }
+  }
+}

@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>UNIENS type proof — actual-copy specimen</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800&display=swap" rel="stylesheet" />
+<style>
+  /* ── layout-neutral type-proof shell only: no brand colour, no cards, no graphics ──
+     Ordering/spacing in this file is proof-fixture arrangement only (fold coverage of the
+     highest-risk strings within the fixed 1280x900 / 390x844 acceptance crops) — NOT page
+     composition. Every block below still exists in full; nothing was cut, only reordered
+     and given tighter spacing so it paints inside the fixed viewports. */
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: #ffffff;
+    color: #111111;
+    font-family: 'Noto Sans KR', sans-serif; /* requested face under test */
+    line-height: 1.6;
+    padding: clamp(16px, 3vw, 40px);
+  }
+  .measure { max-width: 720px; }
+  .measure--wide { max-width: 900px; }
+  .measure--narrow { max-width: 560px; }
+
+  .block { padding: 8px 0; border-top: 1px solid #cccccc; }
+  .block:first-of-type { border-top: none; padding-top: 0; }
+
+  .role-label {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 500;
+    font-size: 10.5px;
+    letter-spacing: 0.06em;
+    color: #808080;
+    margin-bottom: 4px;
+  }
+  .role-note { color: #999999; font-weight: 400; }
+
+  /* Expressive — hero display (the one signature typographic moment) */
+  .hero-h1 {
+    font-weight: 500;
+    font-size: clamp(26px, 5vw, 52px);
+    line-height: 1.24;
+    letter-spacing: -0.01em;
+    margin: 0;
+    word-break: keep-all;
+  }
+  .hero-h1 strong {
+    display: block;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    font-size: 1.06em;
+  }
+
+  /* Productive — hero body. Defect fix (this pass): a blind proof review found the mobile
+     wrap stranding a single particle "이" alone on line 2 ("...병원" / "이 사용한 ...") —
+     same root cause already fixed on .h2/.timeline li/.steps li (default break falls inside
+     one 어절 with no internal space). Extended here. */
+  .hero-body {
+    font-weight: 400;
+    font-size: clamp(15px, 1.6vw, 18px);
+    line-height: 1.6;
+    color: #222222;
+    margin: 6px 0 0;
+    word-break: keep-all;
+  }
+
+  /* Productive — eyebrow label */
+  .eyebrow-row { display: flex; flex-wrap: wrap; gap: 4px 14px; }
+  .eyebrow {
+    display: inline-block;
+    font-weight: 700;
+    font-size: 12.5px;
+    letter-spacing: 0.14em;
+    color: #333333;
+  }
+
+  /* Productive — CTA */
+  .cta-row { display: flex; flex-wrap: wrap; gap: 5px 16px; align-items: baseline; margin-top: 5px; }
+  .cta-primary { font-weight: 700; font-size: 16px; }
+  .cta-secondary { font-weight: 500; font-size: 15px; }
+  .cta-tertiary { font-weight: 500; font-size: 13.5px; text-decoration: underline; }
+
+  /* Productive — section H2 */
+  .h2 {
+    font-weight: 800;
+    font-size: clamp(19px, 2.4vw, 28px);
+    letter-spacing: -0.015em;
+    line-height: 1.3;
+    margin: 0 0 5px;
+    word-break: keep-all;
+  }
+  .h2--normal-break { word-break: normal; }
+
+  /* Productive — dense timeline list (Korean + Latin + numeral + punctuation) */
+  .timeline { margin: 4px 0 0; }
+  .timeline li {
+    list-style: none;
+    font-weight: 400;
+    font-size: 14.5px;
+    line-height: 1.42;
+    padding: 3px 0;
+    border-top: 1px dotted #d5d5d5;
+    word-break: keep-all;
+  }
+  .timeline li:first-child { border-top: none; padding-top: 0; }
+  .timeline .yr {
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+  }
+  /* identifier tokens (license/patent numbers, dates) must not sever mid-code across a line break */
+  .id-token { white-space: nowrap; }
+
+  /* Productive — stat pairs */
+  .stats { display: flex; flex-wrap: wrap; gap: 28px; margin-top: 8px; }
+  .stat-num { font-weight: 800; font-size: clamp(28px, 3.6vw, 40px); line-height: 1; font-variant-numeric: tabular-nums; }
+  .stat-label { font-weight: 500; font-size: 14px; margin: 5px 0 3px; }
+  .stat-narrative { font-weight: 400; font-size: 13px; color: #444444; max-width: 24em; }
+
+  /* Productive — numbered process steps (longest strings) */
+  .steps { margin: 4px 0 0; }
+  .steps li {
+    list-style: none;
+    font-weight: 400;
+    font-size: 14.5px;
+    line-height: 1.42;
+    padding: 4px 0;
+    border-top: 1px dotted #d5d5d5;
+    word-break: keep-all;
+  }
+  .steps li:first-child { border-top: none; padding-top: 0; }
+  .steps .no { font-weight: 700; }
+  .steps .label { font-weight: 700; }
+
+  /* Productive — plain-text credential line (dense identifiers) */
+  .credential { font-weight: 400; font-size: 13.5px; color: #333333; font-variant-numeric: tabular-nums; margin: 0; }
+
+  /* Fallback-stack comparison (loading-plan evidence, not a design choice) */
+  .fallback-face { font-family: sans-serif; }
+
+  #readout {
+    margin-top: 20px;
+    padding-top: 14px;
+    border-top: 2px solid #111111;
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 11.5px;
+    line-height: 1.7;
+    color: #333333;
+    white-space: pre-wrap;
+  }
+
+  @media (max-width: 480px) {
+    .cta-row { gap: 6px 16px; }
+    .stats { gap: 20px; }
+  }
+</style>
+</head>
+<body>
+
+  <!-- Fold-priority order (this pass): hero signature -> hero body (orphan-fix under test) ->
+       eyebrow/CTA -> proof-strip timeline (identifier nowrap under test) -> credential line
+       (identifier nowrap under test) -> process steps (label under test). These six blocks
+       are the ones a reader sees first on the real page and the ones carrying this pass's two
+       findings, so they are placed to paint inside both fixed acceptance crops. Section H2s,
+       the H2 wrap-policy comparison, stat pairs, and the fallback comparison follow after —
+       already-passed evidence from the prior proof pass, kept for full-page continuity. -->
+
+  <div class="block">
+    <div class="role-label">EXPRESSIVE — hero H1 (signature: 500→800 weight jump)</div>
+    <h1 class="hero-h1 measure--wide">병원을 위한<strong>의료기기 수탁 유통</strong></h1>
+  </div>
+
+  <div class="block">
+    <div class="role-label">PRODUCTIVE — hero body (400, keep-all fix applied this pass)</div>
+    <p class="hero-body measure">유엔아이엔스는 의료기기를 병원에 먼저 공급하고, 병원이 사용한 수량만큼 정산합니다.</p>
+  </div>
+
+  <div class="block">
+    <div class="role-label">PRODUCTIVE — eyebrow (700) + CTA (700/500/500 underline)</div>
+    <div class="eyebrow-row">
+      <span class="eyebrow">병원 수탁 의료기기 유통</span>
+      <span class="eyebrow">인증과 허가</span>
+      <span class="eyebrow">제품 라인업</span>
+      <span class="eyebrow">공급 방식</span>
+    </div>
+    <div class="cta-row">
+      <span class="cta-primary">회사소개</span>
+      <span class="cta-secondary">제품소개</span>
+      <span class="cta-tertiary">문의하기</span>
+      <span class="cta-tertiary">인증 현황 전체 보기</span>
+      <span class="cta-tertiary">사업 분야 자세히 보기</span>
+    </div>
+  </div>
+
+  <div class="block">
+    <div class="role-label">PRODUCTIVE — timeline (dense KR+Latin+numeral+punct; id nowrap)</div>
+    <ul class="timeline measure--wide">
+      <li><span class="yr">2017</span> · 의료기기 판매업 신고 · <span class="id-token">제2017-3230034-00183호</span> (송파구 보건소)</li>
+      <li><span class="yr">2021</span> · 의료기기 수입업 허가 · <span class="id-token">제5181호</span> (서울지방식품의약품안전청)</li>
+      <li><span class="yr">2022</span> · 의료기기 제조업 허가 · <span class="id-token">제7857호</span> (서울지방식품의약품안전청)</li>
+      <li><span class="yr">2023</span> · 특허 등록 <span class="id-token">제10-2594423호</span> · 수술용 유해가스 필터장치</li>
+      <li><span class="yr">2025</span> · GMP 적합인정서 취득 · 한국건설생활환경시험연구원(KCL), 유효기간 <span class="id-token">~2028.11.17</span></li>
+    </ul>
+  </div>
+
+  <div class="block">
+    <div class="role-label">PRODUCTIVE — credential line (identifiers nowrap)</div>
+    <p class="credential measure--wide">의료기기 수입업 허가 <span class="id-token">제5181호</span> · 제조업 허가 <span class="id-token">제7857호</span></p>
+  </div>
+
+  <div class="block">
+    <div class="role-label">PRODUCTIVE — process steps (longest strings, keep-all)</div>
+    <ul class="steps measure--wide">
+      <li><span class="no">01</span> · <span class="label">제품 납품</span> — 의료기기를 병원 내 지정 보관 장소에 사전 납품합니다.</li>
+      <li><span class="no">02</span> · <span class="label">사용 및 재고 관리</span> — 병원이 실제 의료 현장에서 제품을 사용하며 재고를 모니터링합니다.</li>
+      <li><span class="no">03</span> · <span class="label">사용량 정산</span> — 사용된 수량에 대해서만 주기적으로 정산합니다.</li>
+      <li><span class="no">04</span> · <span class="label">재고 보충</span> — 기준 재고 이하로 감소 시 즉시 보충 납품하여 공급을 유지합니다.</li>
+    </ul>
+  </div>
+
+  <div class="block">
+    <div class="role-label">PRODUCTIVE — section H2 (800, keep-all) — four instances shipped on this page</div>
+    <h2 class="h2 measure--wide">허가번호와 등록일로 증명합니다</h2>
+    <h2 class="h2 measure--wide">수술용 기기와 소모성 의료용품을 공급합니다</h2>
+    <h2 class="h2 measure--wide">선공급 후정산, 네 단계로 운영합니다</h2>
+    <h2 class="h2 measure--wide">회사소개에서 자세히 확인할 수 있습니다</h2>
+  </div>
+
+  <div class="block">
+    <div class="role-label">WRAP-POLICY TEST — same H2 string, keep-all (chosen) vs. normal (default, orphan risk)</div>
+    <h2 class="h2 measure--wide">수술용 기기와 소모성 의료용품을 공급합니다</h2>
+    <h2 class="h2 h2--normal-break measure--wide" style="margin-top:10px;">수술용 기기와 소모성 의료용품을 공급합니다</h2>
+  </div>
+
+  <div class="block">
+    <div class="role-label">PRODUCTIVE — stat pairs (numeral 800 tabular / label 500 / narrative 400)</div>
+    <div class="stats">
+      <div>
+        <div class="stat-num">20+</div>
+        <div class="stat-label">거래 병원</div>
+        <div class="stat-narrative">국내 약 20개 병원과 수탁 계약을 맺고 있습니다.</div>
+      </div>
+      <div>
+        <div class="stat-num">100%</div>
+        <div class="stat-label">허가 인증 제품</div>
+        <div class="stat-narrative">신고·허가·인증 6건을 모두 보유하고 있습니다.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="block">
+    <div class="role-label">FALLBACK COMPARISON — requested face vs. system sans-serif (loading-plan evidence, not a design choice)</div>
+    <div style="display:flex; flex-direction:column; gap:10px;">
+      <div>
+        <div class="role-label" style="margin-bottom:3px;">Noto Sans KR (requested)</div>
+        <div class="hero-h1 measure--wide" style="font-size:clamp(20px,3.2vw,32px);">병원을 위한<strong>의료기기 수탁 유통</strong></div>
+      </div>
+      <div>
+        <div class="role-label" style="margin-bottom:3px;">fallback-face (system sans-serif, simulated pre-swap state)</div>
+        <div class="hero-h1 fallback-face measure--wide" style="font-size:clamp(20px,3.2vw,32px);">병원을 위한<strong>의료기기 수탁 유통</strong></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="readout">loading computed-style readout…</div>
+
+<script>
+(function () {
+  var out = document.getElementById('readout');
+  var lines = [];
+
+  function computedFor(selector, label) {
+    var el = document.querySelector(selector);
+    if (!el) { lines.push(label + ': element not found'); return; }
+    var cs = getComputedStyle(el);
+    lines.push(
+      label + ' | requested: ' + (el.dataset.requested || 'n/a') +
+      ' -> computed font-family: "' + cs.fontFamily + '"' +
+      ', computed font-weight: ' + cs.fontWeight +
+      ', computed font-size: ' + cs.fontSize +
+      (el.dataset.checkBreak ? ', computed word-break: ' + cs.wordBreak : '') +
+      (el.dataset.checkWs ? ', computed white-space: ' + cs.whiteSpace : '')
+    );
+  }
+
+  document.querySelector('.hero-h1').dataset.requested = "Noto Sans KR / 500";
+  document.querySelector('.hero-h1 strong').dataset.requested = "Noto Sans KR / 800";
+  document.querySelector('.hero-body').dataset.requested = "Noto Sans KR / 400";
+  document.querySelector('.hero-body').dataset.checkBreak = "1";
+  document.querySelector('.eyebrow').dataset.requested = "Noto Sans KR / 700";
+  document.querySelector('.cta-primary').dataset.requested = "Noto Sans KR / 700";
+  document.querySelector('.h2').dataset.requested = "Noto Sans KR / 800";
+  document.querySelector('.timeline .yr').dataset.requested = "Noto Sans KR / 700";
+  document.querySelector('.timeline .id-token').dataset.requested = "Noto Sans KR / 400";
+  document.querySelector('.timeline .id-token').dataset.checkWs = "1";
+  document.querySelector('.stat-num').dataset.requested = "Noto Sans KR / 800";
+  document.querySelector('.fallback-face').dataset.requested = "sans-serif (fallback) / 500";
+
+  document.fonts.ready.then(function () {
+    lines.push('document.fonts.ready: resolved');
+    lines.push('document.fonts.status: ' + document.fonts.status);
+    ['400','500','700','800'].forEach(function (w) {
+      var q = w + ' 16px "Noto Sans KR"';
+      lines.push('document.fonts.check(' + JSON.stringify(q) + '): ' + document.fonts.check(q));
+    });
+    computedFor('.hero-h1', 'hero H1 line1 (500)');
+    computedFor('.hero-h1 strong', 'hero H1 line2 (800, signature)');
+    computedFor('.hero-body', 'hero body (400)');
+    computedFor('.eyebrow', 'eyebrow (700)');
+    computedFor('.cta-primary', 'CTA primary (700)');
+    computedFor('.h2', 'section H2 (800)');
+    computedFor('.timeline .yr', 'timeline year token (700)');
+    computedFor('.timeline .id-token', 'timeline identifier token (400, nowrap)');
+    computedFor('.stat-num', 'stat numeral (800)');
+    computedFor('.fallback-face', 'fallback comparison (forced sans-serif)');
+    out.textContent = lines.join('\n');
+    document.body.setAttribute('data-fonts-ready', 'true');
+  }).catch(function (err) {
+    lines.push('document.fonts.ready: REJECTED — ' + err);
+    out.textContent = lines.join('\n');
+    document.body.setAttribute('data-fonts-ready', 'error');
+  });
+})();
+</script>
+</body>
+</html>

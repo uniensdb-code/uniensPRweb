@@ -1,0 +1,18 @@
+{
+  "inputPath": ".omd/refs/_captures/icomat-top.png",
+  "provenance": {
+    "sourcePage": "https://icomat.co.uk/",
+    "captureRegion": "Top segment of the home page: kinetic-typography hero (Engineer Without Limits) plus the conventional-versus-steered-fiber technology comparison graphic.",
+    "licenseStatus": "restricted",
+    "rightsNotes": "Third-party award-recognized Awwwards B2B manufacturing site captured for internal reference measurement only; not licensed for reuse; no pixels or assets will be shipped.",
+    "capturedAt": "2026-07-23T04:05:28.044Z"
+  },
+  "transfer": {
+    "visualRole": "high-visual-system: confident B2B technical-credibility hero without a stock-photo rotating slider",
+    "principles": [
+      "Hero anchor is large kinetic display type stating the capability claim directly plus one measurable conventional-versus-new technology comparison graphic - no rotating photography, no generic office or handshake stock imagery.",
+      "Colour register stays low-saturation dark and neutral throughout; the only saturation is reserved for the one CTA link colour, matching a sixty-thirty-ten accent-reserved principle."
+    ],
+    "geometry": { "width": 1425, "height": 10500, "aspectRatio": 0.1357 }
+  }
+}

@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>UNIENS home — structural sketch — candidate-1 (axis A/A)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#ffffff;
+    --panel:#f1f1f1;
+    --panel-2:#e9e9e9;
+    --line:#cfcfcf;
+    --line-strong:#9a9a9a;
+    --ink:#151515;
+    --ink-soft:#4a4a4a;
+    --ink-mute:#7a7a7a;
+    --radius:2px; /* sharp/square house principle: minimal rounding */
+    --max-w:1160px;
+    --gap-8:8px;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);}
+  body{
+    font-family:'Noto Sans KR', sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  .container{max-width:var(--max-w);margin:0 auto;padding:0 32px;}
+  @media (max-width:768px){ .container{padding:0 20px;} }
+
+  /* structural region labels — grayscale meta only, not shipped copy */
+  .region-tag{
+    font-family:'Noto Sans KR', sans-serif;
+    font-weight:500;
+    font-size:10.5px;
+    letter-spacing:.08em;
+    color:var(--ink-mute);
+    text-transform:uppercase;
+    border:1px solid var(--line);
+    display:inline-block;
+    padding:2px 8px;
+    margin-bottom:14px;
+    background:var(--bg);
+  }
+
+  header.nav{
+    border-bottom:1px solid var(--line-strong);
+    background:var(--bg);
+  }
+  header.nav .container{
+    display:flex; align-items:center; justify-content:space-between;
+    height:64px;
+  }
+  .nav-logo{
+    width:96px;height:22px;background:var(--panel-2);border:1px solid var(--line-strong);
+  }
+  .nav-links{display:flex;gap:28px;list-style:none;margin:0;padding:0;}
+  .nav-links li{
+    font-weight:500;font-size:14px;color:var(--ink-soft);
+    padding-bottom:4px;
+  }
+  .nav-links li.current{color:var(--ink);border-bottom:2px solid var(--ink);}
+  @media (max-width:768px){
+    .nav-links{gap:16px;}
+    .nav-links li{font-size:12px;}
+  }
+
+  section{border-bottom:1px solid var(--line);}
+  section:last-of-type{border-bottom:none;}
+
+  /* ---------- HERO — Axis A: mass carried entirely by kinetic-type headline ---------- */
+  .hero{
+    padding:96px 0 72px;
+    background:var(--bg);
+  }
+  .hero .container{
+    display:block; /* single text column — no distinct boxed evidence panel (Axis A) */
+    max-width:840px; /* left-weighted text column, narrower than full container */
+    margin-left:0;
+  }
+  .eyebrow{
+    font-weight:700; font-size:12.5px; letter-spacing:.06em;
+    color:var(--ink-soft); text-transform:uppercase;
+    margin:0 0 20px;
+  }
+  .hero-h1{
+    margin:0 0 28px;
+    font-weight:500;
+    font-size:clamp(26px, 14.6px + 2.92vw, 52px);
+    line-height:1.18;
+    color:var(--ink);
+    word-break:keep-all;
+  }
+  .hero-h1 strong{
+    display:block;
+    font-weight:800;
+    font-size:clamp(27.56px, 15.48px + 3.10vw, 55.12px);
+    letter-spacing:-0.02em;
+    margin-top:.12em;
+  }
+  .hero-body{
+    font-weight:400;
+    font-size:clamp(15px, 11.6px + 1.05vw, 18px);
+    line-height:1.6;
+    color:var(--ink-soft);
+    max-width:36em;
+    word-break:keep-all;
+    margin:0 0 18px;
+  }
+  /* evidence-numeral row — small & inline, quiet secondary line, NOT a boxed panel */
+  .hero-evidence{
+    font-weight:500;
+    font-size:14px;
+    color:var(--ink-mute);
+    letter-spacing:.01em;
+    margin:0 0 34px;
+    padding-top:10px;
+    border-top:1px solid var(--line);
+    display:inline-block;
+  }
+  .hero-evidence b{font-weight:700;color:var(--ink-soft);}
+  .cta-row{display:flex;flex-wrap:wrap;gap:16px;align-items:center;}
+  .btn{
+    font-weight:700; font-size:16px;
+    padding:14px 28px;
+    border-radius:var(--radius);
+    text-decoration:none;
+    display:inline-block;
+    border:1px solid var(--ink);
+  }
+  .btn--primary{background:var(--ink);color:var(--bg);}
+  .btn--outline{background:var(--bg);color:var(--ink);}
+
+  /* ---------- PROOF STRIP — Axis A: compact horizontal rail, modest height ---------- */
+  .proof{
+    padding:44px 0 40px; /* deliberately modest — one scan among several, not dominant */
+    background:var(--panel);
+  }
+  .proof .head{margin-bottom:24px;max-width:640px;}
+  .h2{
+    font-weight:800;
+    font-size:clamp(19px, 11.9px + 1.42vw, 28px);
+    line-height:1.28;
+    margin:0 0 8px;
+    word-break:keep-all;
+  }
+  .proof-sub{font-size:13px;color:var(--ink-mute);margin:0;}
+
+  .timeline{
+    display:flex;
+    list-style:none;margin:0 0 22px;padding:0;
+    border-top:2px solid var(--line-strong);
+    gap:0;
+  }
+  .timeline li{
+    flex:1 1 0;
+    padding:14px 12px 0;
+    border-left:1px solid var(--line);
+    word-break:keep-all;
+  }
+  .timeline li:first-child{border-left:none;}
+  .timeline .yr{font-weight:700;font-size:14.5px;display:block;margin-bottom:4px;}
+  .timeline .desc{font-size:12.5px;color:var(--ink-soft);display:block;margin-bottom:3px;}
+  .timeline .id-token{
+    font-weight:400;font-size:14.5px;color:var(--ink-mute);
+    white-space:nowrap;
+    display:inline-block;
+  }
+  @media (max-width:768px){
+    .timeline{flex-direction:column;border-top:none;}
+    .timeline li{
+      border-left:2px solid var(--line-strong);
+      border-top:none;
+      padding:10px 0 14px 16px;
+      margin-left:2px;
+    }
+  }
+
+  .stats-row{display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:640px;}
+  .stat-pair{border-left:2px solid var(--line-strong);padding-left:14px;}
+  .stat-num{
+    font-weight:800;
+    font-size:clamp(28px, 21.7px + 1.03vw, 40px);
+    display:block;line-height:1;margin-bottom:6px;
+  }
+  .stat-label{font-weight:700;font-size:13px;color:var(--ink-soft);display:block;margin-bottom:4px;}
+  .stat-note{font-size:12.5px;color:var(--ink-mute);margin:0;word-break:keep-all;}
+  .inline-link{display:inline-block;margin-top:20px;font-size:13.5px;font-weight:500;color:var(--ink-soft);border-bottom:1px solid var(--ink-soft);}
+
+  /* ---------- PRODUCT-LINE TEASER ---------- */
+  .products{padding:80px 0;}
+  .products .head{max-width:640px;margin-bottom:36px;}
+  .products-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
+  @media (max-width:768px){.products-grid{grid-template-columns:1fr;}}
+  .p-card{
+    border:1px solid var(--line-strong);
+    padding:28px;
+    background:var(--bg);
+  }
+  .p-card .cat-label{font-weight:700;font-size:12px;letter-spacing:.05em;color:var(--ink-mute);text-transform:uppercase;margin:0 0 10px;}
+  .p-card .cat-title{font-weight:700;font-size:19px;margin:0 0 10px;word-break:keep-all;}
+  .p-card .cat-desc{font-size:14px;color:var(--ink-soft);margin:0 0 16px;word-break:keep-all;line-height:1.55;}
+  .tag-row{display:flex;flex-wrap:wrap;gap:8px;}
+  .tag{font-size:12px;font-weight:500;color:var(--ink-soft);border:1px solid var(--line);padding:4px 10px;}
+  .products-body{font-size:15px;color:var(--ink-soft);max-width:34em;margin:24px 0 0;word-break:keep-all;}
+
+  /* ---------- PROCESS — numbered horizontal strip ---------- */
+  .process{padding:80px 0;background:var(--panel);}
+  .process .head{max-width:640px;margin-bottom:12px;}
+  .process-intro{font-size:14.5px;color:var(--ink-soft);margin:0 0 32px;word-break:keep-all;}
+  .steps{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:0;
+    list-style:none;margin:0;padding:0;
+    border-top:2px solid var(--line-strong);
+  }
+  .steps li{
+    padding:16px 16px 0;
+    border-left:1px solid var(--line);
+    word-break:keep-all;
+  }
+  .steps li:first-child{border-left:none;}
+  .steps .no{font-weight:800;font-size:20px;color:var(--ink-mute);display:block;margin-bottom:6px;}
+  .steps .label{font-weight:700;font-size:14.5px;display:block;margin-bottom:6px;}
+  .steps .body{font-size:12.5px;color:var(--ink-soft);line-height:1.5;}
+  @media (max-width:768px){
+    .steps{grid-template-columns:1fr 1fr;border-top:none;}
+    .steps li{border-left:none;border-top:2px solid var(--line-strong);padding:14px 10px 20px 0;}
+  }
+  @media (max-width:540px){
+    .steps{grid-template-columns:1fr;}
+  }
+
+  /* ---------- CTA disambiguation ---------- */
+  .cta-final{padding:80px 0 96px;}
+  .cta-final .container{
+    display:flex;justify-content:space-between;align-items:flex-end;gap:32px;flex-wrap:wrap;
+  }
+  .cta-final .primary-block{max-width:520px;}
+  .cta-final .h2{margin-bottom:24px;}
+  .secondary-block{text-align:right;}
+  .secondary-links{display:flex;gap:20px;justify-content:flex-end;list-style:none;margin:0 0 16px;padding:0;}
+  .secondary-links a{font-weight:500;font-size:14px;color:var(--ink-soft);text-decoration:underline;}
+  .credential{font-weight:400;font-size:13.5px;color:var(--ink-mute);margin:0;}
+  .credential .id-token{white-space:nowrap;}
+  @media (max-width:768px){
+    .cta-final .container{flex-direction:column;align-items:flex-start;}
+    .secondary-block{text-align:left;width:100%;}
+    .secondary-links{justify-content:flex-start;}
+  }
+
+  footer.shell{
+    border-top:1px solid var(--line-strong);
+    padding:24px 0;
+    background:var(--panel-2);
+  }
+  footer.shell .container{font-size:12px;color:var(--ink-mute);}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="container">
+    <div class="nav-logo" aria-hidden="true"></div>
+    <ul class="nav-links">
+      <li class="current">홈</li>
+      <li>회사소개</li>
+      <li>제품소개</li>
+      <li>문의하기</li>
+    </ul>
+  </div>
+</header>
+
+<!-- ================= HERO — identity rung — Axis A (headline-only mass) ================= -->
+<section class="hero">
+  <div class="container">
+    <span class="region-tag">Hero · 정체성</span>
+    <p class="eyebrow">병원 수탁 의료기기 유통</p>
+    <h1 class="hero-h1">병원을 위한<strong>의료기기 수탁 유통</strong></h1>
+    <p class="hero-body">유엔아이엔스는 의료기기를 병원에 먼저 공급하고, 병원이 사용한 수량만큼 정산합니다.</p>
+    <p class="hero-evidence"><b>20+</b> 병원 · <b>100%</b> 허가 인증 제품</p>
+    <div class="cta-row">
+      <a class="btn btn--primary" href="#about">회사소개</a>
+      <a class="btn btn--outline" href="#products">제품소개</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROOF STRIP — verification rung — Axis A (compact, modest) ================= -->
+<section class="proof">
+  <div class="container">
+    <span class="region-tag">Proof strip · 검증 — compact rail, one scan among several</span>
+    <div class="head">
+      <p class="eyebrow">인증과 허가</p>
+      <h2 class="h2">허가번호와 등록일로 증명합니다</h2>
+    </div>
+
+    <ol class="timeline">
+      <li>
+        <span class="yr">2017</span>
+        <span class="desc">의료기기 판매업 신고</span>
+        <span class="id-token">제2017-3230034-00183호</span>
+      </li>
+      <li>
+        <span class="yr">2021</span>
+        <span class="desc">의료기기 수입업 허가</span>
+        <span class="id-token">제5181호</span>
+      </li>
+      <li>
+        <span class="yr">2022</span>
+        <span class="desc">의료기기 제조업 허가</span>
+        <span class="id-token">제7857호</span>
+      </li>
+      <li>
+        <span class="yr">2023</span>
+        <span class="desc">특허 등록</span>
+        <span class="id-token">제10-2594423호</span>
+      </li>
+      <li>
+        <span class="yr">2025</span>
+        <span class="desc">GMP 적합인정서 취득</span>
+        <span class="id-token">~2028.11.17</span>
+      </li>
+    </ol>
+
+    <div class="stats-row">
+      <div class="stat-pair">
+        <span class="stat-num">20+</span>
+        <span class="stat-label">거래 병원</span>
+        <p class="stat-note">국내 약 20개 병원과 수탁 계약을 맺고 있습니다.</p>
+      </div>
+      <div class="stat-pair">
+        <span class="stat-num">100%</span>
+        <span class="stat-label">허가 인증 제품</span>
+        <p class="stat-note">신고·허가·인증 6건을 모두 보유하고 있습니다.</p>
+      </div>
+    </div>
+    <a class="inline-link" href="#about">인증 현황 전체 보기</a>
+  </div>
+</section>
+
+<!-- ================= PRODUCT-LINE TEASER — offer rung ================= -->
+<section class="products">
+  <div class="container">
+    <span class="region-tag">Product-line teaser · 제품</span>
+    <div class="head">
+      <p class="eyebrow">제품 라인업</p>
+      <h2 class="h2">수술용 기기와 소모성 의료용품을 공급합니다</h2>
+    </div>
+    <div class="products-grid">
+      <div class="p-card">
+        <p class="cat-label">Category 01</p>
+        <p class="cat-title">수술용 기기</p>
+        <p class="cat-desc">수술 현장에서 사용되는 의료기기를 공급합니다.</p>
+        <div class="tag-row">
+          <span class="tag">수탁 공급 가능</span>
+          <span class="tag">급여 코드 보유 품목 포함</span>
+        </div>
+      </div>
+      <div class="p-card">
+        <p class="cat-label">Category 02</p>
+        <p class="cat-title">소모성 의료용품</p>
+        <p class="cat-desc">병원에서 반복적으로 사용하는 소모성 제품을 공급합니다.</p>
+        <div class="tag-row">
+          <span class="tag">수탁 공급 가능</span>
+          <span class="tag">급여 코드 보유 품목 포함</span>
+        </div>
+      </div>
+    </div>
+    <p class="products-body">일부 품목은 급여 코드를 보유하고 있으며, 병원 수탁 공급도 가능합니다.</p>
+    <a class="inline-link" href="#products">제품소개</a>
+  </div>
+</section>
+
+<!-- ================= PROCESS — mechanism rung ================= -->
+<section class="process">
+  <div class="container">
+    <span class="region-tag">Process · 절차 — 수탁 정산 4단계</span>
+    <div class="head">
+      <p class="eyebrow">공급 방식</p>
+      <h2 class="h2">선공급 후정산, 네 단계로 운영합니다</h2>
+    </div>
+    <p class="process-intro">병원은 선구매 부담 없이 사용한 만큼만 정산합니다.</p>
+
+    <ol class="steps">
+      <li>
+        <span class="no">01</span>
+        <span class="label">제품 납품</span>
+        <span class="body">의료기기를 병원 내 지정 보관 장소에 사전 납품합니다.</span>
+      </li>
+      <li>
+        <span class="no">02</span>
+        <span class="label">사용 및 재고 관리</span>
+        <span class="body">병원이 실제 의료 현장에서 제품을 사용하며 재고를 모니터링합니다.</span>
+      </li>
+      <li>
+        <span class="no">03</span>
+        <span class="label">사용량 정산</span>
+        <span class="body">사용된 수량에 대해서만 주기적으로 정산합니다.</span>
+      </li>
+      <li>
+        <span class="no">04</span>
+        <span class="label">재고 보충</span>
+        <span class="body">기준 재고 이하로 감소 시 즉시 보충 납품하여 공급을 유지합니다.</span>
+      </li>
+    </ol>
+    <a class="inline-link" href="#about">사업 분야 자세히 보기</a>
+  </div>
+</section>
+
+<!-- ================= CTA DISAMBIGUATION — action rung ================= -->
+<section class="cta-final">
+  <div class="container">
+    <div class="primary-block">
+      <span class="region-tag">CTA disambiguation · 행동</span>
+      <h2 class="h2">회사소개에서 자세히 확인할 수 있습니다</h2>
+      <a class="btn btn--primary" href="#about">회사소개</a>
+    </div>
+    <div class="secondary-block">
+      <ul class="secondary-links">
+        <li><a href="#products">제품소개</a></li>
+        <li><a href="#contact">문의하기</a></li>
+      </ul>
+      <p class="credential">의료기기 <span class="id-token">수입업 허가 제5181호</span> · <span class="id-token">제조업 허가 제7857호</span></p>
+    </div>
+  </div>
+</section>
+
+<footer class="shell">
+  <div class="container">structural sketch — candidate-1 — grayscale, no production styling</div>
+</footer>
+
+</body>
+</html>

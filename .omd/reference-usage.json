@@ -1,0 +1,57 @@
+{
+  "schemaVersion": "reference-usage-v1",
+  "boardSha256": "ce338a396ebbe28cdb8ed535bbcd7ee528404ffaa53c0b3f792297479bf8437d",
+  "assemblySha256": "936bd593de0b90d6b835ab2e3e71ef1ed3a0cb6e22b90898260525bf6a507a71",
+  "candidateId": "institutional-proof-forward",
+  "note": "Hand-authored: the installed omd CLI (v0.18.0) does not expose a `ref usage`/`recordReferenceUsage` subcommand (confirmed via `omd --help`), so this ledger was written directly by the coordinator/finalizer from the actual shipped build, following the reference-assembly protocol's row schema in spirit.",
+  "rows": [
+    {
+      "slotId": "hero-signature-moment",
+      "referenceId": "fragment-c7e7f40b3c436ece",
+      "status": "used",
+      "destinationRoute": "/",
+      "destinationSelector": ".hero__content--home",
+      "evidence": "Kinetic-type two-weight headline (500→800) replacing the prior 3-slide autoplay stock-photo hero, paired with a quiet inline evidence-numeral row (20+ hospitals / 100% licensed) instead of a boxed panel."
+    },
+    {
+      "slotId": "hero-anti-pattern",
+      "referenceId": "fragment-cde034bfab2a21a4",
+      "status": "anti-reference",
+      "destinationRoute": "/",
+      "destinationSelector": ".hero",
+      "evidence": "Explicit rejection condition honored: no price-forward product-thumbnail carousel, no footer-only regulatory text — the prior rotating stock-photo hero was removed and no marketplace-grid pattern was introduced anywhere on the page."
+    },
+    {
+      "slotId": "proof-strip",
+      "referenceId": "fragment-74f5500772fbebc8",
+      "status": "used",
+      "destinationRoute": "/",
+      "destinationSelector": ".proof-rail",
+      "evidence": "Five-stop chronological rail (2017–2025), each stop pairing a year with a real registration/patent/GMP fact as plain text, per the dated-milestone-timeline anatomy."
+    },
+    {
+      "slotId": "product-teaser",
+      "referenceId": "fragment-13143b7437ff2747",
+      "status": "used",
+      "destinationRoute": "/",
+      "destinationSelector": ".teaser-grid",
+      "evidence": "Two label-above-title category cards (수술용 기기 / 소모성 의료용품) reusing the site's existing `.product-card__category` convention, strengthened in round 1 with distinct per-card borders/background so they read as separate masses."
+    },
+    {
+      "slotId": "process-steps",
+      "referenceId": "fragment-375ae456307ddece",
+      "status": "used",
+      "destinationRoute": "/",
+      "destinationSelector": ".process-rail",
+      "evidence": "Numbered 01–04 horizontal rail restating the real 4-step 수탁 정산 방식 flow from about.html, one claim per step."
+    },
+    {
+      "slotId": "cta-disambiguation",
+      "referenceId": "fragment-13143b7437ff2747",
+      "status": "used",
+      "destinationRoute": "/",
+      "destinationSelector": ".final-cta",
+      "evidence": "Clearly-primary (회사소개 filled button) vs. quiet secondary links (제품소개/문의하기) plus a plain-text credential line, replacing the prior two-equal-weight CTA cards."
+    }
+  ]
+}

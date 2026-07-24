@@ -1,0 +1,19 @@
+{
+  "inputPath": ".omd/refs/_captures/tersosolutions.png",
+  "provenance": {
+    "sourcePage": "https://www.tersosolutions.com/",
+    "captureRegion": "Full home page: hero with a concrete deployment count (over three thousand five hundred RAIN RFID devices deployed since 2005), a consignment and vendor-managed-inventory specific capability list (surgical loaner kit management, tissue and implant tracking), and a named partner and client logo strip.",
+    "licenseStatus": "restricted",
+    "rightsNotes": "Third-party direct functional analog, a healthcare consignment and vendor-managed-inventory vendor, captured for internal reference measurement only; not licensed for reuse; no pixels or assets will be shipped.",
+    "capturedAt": "2026-07-23T04:03:24.752Z"
+  },
+  "transfer": {
+    "visualRole": "supporting-component: domain-adjacent proof pattern for a hospital-consignment vendor's home page",
+    "principles": [
+      "The single most prominent hero numeral is an operating-history count, devices deployed since a stated year, rather than a generic adjective claim - the direct model for leading with UNIENS' own real count of partner hospitals and dated multi-year license history instead of the current trust, expertise, and partnership captions.",
+      "Capability copy names the exact consignment and vendor-managed-inventory use cases served, surgical loaner kits, tissue and implant tracking, instead of describing the business model abstractly - matches how UNIENS' own real four-step consignment settlement flow should be named explicitly rather than summarized as partnership.",
+      "A named client and partner logo strip functions as social proof directly beneath the hero, before any feature explanation, reinforcing that named evidence precedes feature description."
+    ],
+    "geometry": { "width": 1265, "height": 4476, "aspectRatio": 0.2827 }
+  }
+}

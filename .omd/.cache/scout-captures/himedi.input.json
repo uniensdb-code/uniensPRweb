@@ -1,0 +1,20 @@
+{
+  "inputPath": ".omd/refs/_captures/himedi.png",
+  "provenance": {
+    "sourcePage": "https://www.himedi.net/",
+    "captureRegion": "Full home page (header, hero product carousel, best-seller grid, footer with 통신판매업신고번호 and 사업자등록번호) - direct domain competitor: Korean medical-supply wholesale distributor site.",
+    "licenseStatus": "restricted",
+    "rightsNotes": "Third-party competitor screenshot captured for internal LEGO reference measurement only; not licensed for reuse; no pixels or assets will be shipped.",
+    "capturedAt": "2026-07-23T04:03:24.752Z"
+  },
+  "transfer": {
+    "visualRole": "anti-reference: generic Korean medical-wholesale-mall template to explicitly avoid",
+    "principles": [
+      "Macro layout is a stock e-commerce shopping-mall grid (product thumbnail cards, price-forward, cart icon) with no institutional or regulatory credibility framing anywhere above the fold.",
+      "Regulatory identity numbers are relegated to small footer text, not a first-class proof element - the opposite of what a consignment distributor's credibility case needs.",
+      "Colour and type carry no brand register at all - default red sale badges and generic sans body type read as anonymous marketplace, not as a distributor a hospital purchasing team would trust with a consignment relationship.",
+      "No timeline, certification, or company-history narrative exists anywhere on the page - proof is entirely absent, confirming that the direct domain-competitor default is exactly the generic template this redesign must depart from."
+    ],
+    "geometry": { "width": 1450, "height": 7774, "aspectRatio": 0.1865 }
+  }
+}

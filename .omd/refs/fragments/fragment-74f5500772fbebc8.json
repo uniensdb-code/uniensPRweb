@@ -1,0 +1,26 @@
+{
+  "schemaVersion": "image-fragment-v1",
+  "id": "fragment-74f5500772fbebc8",
+  "sha256": "9b1f04d58f39298bde2c10f7d5568ae3517c4a200908b7b81b14c7cfe0d97040",
+  "imagePath": ".omd/refs/fragments/9b1f04d58f39298bde2c10f7d5568ae3517c4a200908b7b81b14c7cfe0d97040.png",
+  "provenance": {
+    "sourcePage": "https://www.capitalgroupdc.com/about-us",
+    "captureRegion": "About-us page Our History vertical timeline: year-stamped milestone cards spanning 2011 through 2024, each pairing a narrative headline with concrete counters for employee count, contract count, and contract value.",
+    "licenseStatus": "restricted",
+    "rightsNotes": "Third-party institutional-consulting site, Awwwards-catalogued, agency Wolf and Whale, captured for internal reference measurement only; not licensed for reuse; no pixels or assets will be shipped.",
+    "capturedAt": "2026-07-23T04:03:24.752Z"
+  },
+  "transfer": {
+    "visualRole": "supporting-component: dated milestone and history timeline anatomy for a credibility-forward institutional page",
+    "principles": [
+      "Each timeline entry pairs one qualitative headline with two to four quantitative counters (employee count, contract value, client count) in the same card - proof is always paired numeric plus narrative, never adjective-only, which is exactly the model for restating UNIENS' registration, import, manufacturing, patent, and GMP timeline with its real registration numbers attached rather than as bare labels.",
+      "Milestones are ordered strictly chronologically with a persistent year marker as the primary scan anchor, reinforcing dated recency as the credibility signal itself.",
+      "Density is high, twelve stops, but each stop is visually terse: a title, one sentence, and numerals, avoiding paragraph-length history prose that would compete with the numeric proof."
+    ],
+    "geometry": {
+      "width": 1265,
+      "height": 2846,
+      "aspectRatio": 0.4446
+    }
+  }
+}

@@ -44,6 +44,7 @@ python3 -m http.server 8080
 | `products/success-f.html` | `/products/success-f` | SUCCESS F 세트 상세 |
 | `products/airfilter.html` | `/products/airfilter` | New Air Filter 상세 |
 | `products/xblock.html` | `/products/xblock` | X BLOCK 상세 |
+| `products/gentaq.html` | `/products/gentaq` | GENTA Q (젠타큐) 상세 |
 
 ---
 
@@ -60,16 +61,18 @@ uniens-website/
 │   ├── success.html
 │   ├── success-f.html
 │   ├── airfilter.html
-│   └── xblock.html
+│   ├── xblock.html
+│   └── gentaq.html
 │
 ├── css/
-│   └── style.css           # 전체 공통 스타일 (헤더·푸터·레이아웃 포함)
+│   ├── style.css           # 전체 공통 스타일 (헤더·푸터·레이아웃 포함)
+│   └── product.css         # 제품 상세 페이지 전용 스타일
 │
 ├── js/
 │   ├── components.js       # 헤더·푸터 공통 컴포넌트 (★ 수정 핵심 파일)
 │   └── main.js             # 햄버거 메뉴·스크롤 애니메이션 등 인터랙션
 │
-├── images/                 # 제품 이미지, 로고, 핵심가치 배경 이미지
+├── images/                 # 제품 이미지, 로고, 핵심가치 배경 이미지, 제품 사용설명서 이미지
 ├── pdf/                    # 제품별 카탈로그 PDF
 │
 ├── admin/                  # Netlify CMS 관리자 페이지
@@ -106,6 +109,7 @@ const _NAV = [
 | SUCCESS F 세트 | `images/successsetf.jpg` | `pdf/successFcatalog.pdf` |
 | New Air Filter | `images/newairfiltrer.jpg` | `pdf/airfiltercatalog.pdf` |
 | X BLOCK | `images/xblockpage.jpg` | `pdf/xblockcatalog.pdf` |
+| GENTA Q (젠타큐) | `images/gentaq.jpg` | `pdf/gentaqcatalog.pdf` |
 
 > 파일명을 그대로 유지한 채 교체하면 HTML 수정 없이 바로 반영됩니다.
 

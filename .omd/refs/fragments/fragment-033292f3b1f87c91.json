@@ -1,0 +1,26 @@
+{
+  "schemaVersion": "image-fragment-v1",
+  "id": "fragment-033292f3b1f87c91",
+  "sha256": "3612950a540e528d4c08a573a90f26c999fd703d5a23fd31e6a60d13a635d927",
+  "imagePath": ".omd/refs/fragments/3612950a540e528d4c08a573a90f26c999fd703d5a23fd31e6a60d13a635d927.png",
+  "provenance": {
+    "sourcePage": "https://jera-capital.com/",
+    "captureRegion": "Full home page: single-screen brand-meaning statement plus footer block listing a CVR company-registration number, a Danish FSA regulator ID, and named compliance and PRIIP disclosure documents.",
+    "licenseStatus": "restricted",
+    "rightsNotes": "Third-party private-equity fund site captured for internal reference measurement only; not licensed for reuse; no pixels or assets will be shipped.",
+    "capturedAt": "2026-07-23T04:03:24.752Z"
+  },
+  "transfer": {
+    "visualRole": "supporting-content: regulatory-registration-as-credibility copy and layout pattern for a restrained single-claim page",
+    "principles": [
+      "Regulatory proof, a CVR number, a Danish FSA registration ID, and named compliance documents, is stated as plain, undecorated fact text in a fixed footer position rather than dramatized - confirms that for an institutional or regulated audience, a real registration number stated plainly outperforms a badge graphic.",
+      "The page commits to exactly one message per screen, brand meaning, then contact, then registration, rather than stacking multiple competing claims - directly informs why UNIENS' proof strip should isolate license, patent, and GMP facts into their own dedicated section rather than blending them into the hero.",
+      "No stock imagery or generic hero photograph anywhere on the page; the entire credibility case rests on restrained typography and factual registration text."
+    ],
+    "geometry": {
+      "width": 1265,
+      "height": 5166,
+      "aspectRatio": 0.245
+    }
+  }
+}

@@ -1,0 +1,260 @@
+{
+  "schemaVersion": "reference-board-v1",
+  "frameSha256": "3b3c08c5b197deb6a71f7d965fa0ebbfca578aff3dcb56afa8f604f065744710",
+  "candidates": [
+    {
+      "id": "institutional-proof-forward",
+      "label": "Institutional proof-forward",
+      "route": "/",
+      "rationale": "Leans on the aerospace-manufacturer and institutional-fintech evidence: a confident kinetic-type hero without a stock photo, a numeric-plus-narrative dated timeline for the license and patent and GMP history, a labelled capability grid for the product line, and hairline institutional anatomy for the closing choice between About and Products and Contact.",
+      "pieces": [
+        {
+          "slotId": "hero-signature-moment",
+          "sourceKind": "image-fragment",
+          "referenceId": "fragment-c7e7f40b3c436ece",
+          "targetComponent": "히어로 시그니처 모먼트 — 수탁 방식 의료기기 파트너",
+          "targetSelector": ".hero",
+          "taskIds": [
+            "hero"
+          ],
+          "reason": "The source pairs one large kinetic capability statement with a single measurable comparison graphic instead of a rotating photo slider, matching the brief's requirement for a departure from the current three-slide stock hero.",
+          "take": [
+            "structure",
+            "proportion"
+          ],
+          "avoid": "Do not import the source's own manufacturing subject matter or its literal wordmark; only the structural relationship between headline mass and one supporting evidence graphic transfers.",
+          "adaptation": "Replace the technology comparison graphic with a verified UNIENS statistic (dated license count or partner hospital count) and keep the Korean bilingual headline stating the 수탁 distribution model plainly.",
+          "grid": {
+            "column": 1,
+            "span": 12,
+            "order": 0
+          }
+        },
+        {
+          "slotId": "hero-anti-pattern",
+          "sourceKind": "image-fragment",
+          "referenceId": "fragment-cde034bfab2a21a4",
+          "targetComponent": "히어로 반례 — 일반 도매몰 템플릿 회피 대상",
+          "targetSelector": ".hero",
+          "taskIds": [
+            "hero"
+          ],
+          "reason": "A direct Korean domain competitor with no institutional framing documents exactly the generic default this redesign must not converge toward.",
+          "take": [
+            "structure"
+          ],
+          "avoid": "Everything about this source is the rejection condition: price-forward product-thumbnail grids, footer-only regulatory text, and an absent company-history narrative.",
+          "adaptation": "Invert every observed property: move regulatory identity out of the footer into a first-class proof section, and remove any shopping-mall product-thumbnail framing from the hero.",
+          "grid": {
+            "column": 1,
+            "span": 12,
+            "order": 1
+          }
+        },
+        {
+          "slotId": "proof-strip",
+          "sourceKind": "image-fragment",
+          "referenceId": "fragment-74f5500772fbebc8",
+          "targetComponent": "인증・허가 타임라인 프루프 스트립",
+          "targetSelector": ".proof-strip",
+          "taskIds": [
+            "proof-strip"
+          ],
+          "reason": "The source pairs a qualitative headline with concrete numeric counters at every dated stop, which is the direct model for restating the 2017 through 2025 registration and patent and GMP timeline with its real numbers attached.",
+          "take": [
+            "structure",
+            "density"
+          ],
+          "avoid": "Do not import the source's own client-services subject matter, its dozen-stop density, or its scroll-triggered reveal timing.",
+          "adaptation": "Compress to the five real dated UNIENS milestones, pairing each with its actual registration number rather than a generic counter.",
+          "grid": {
+            "column": 1,
+            "span": 12,
+            "order": 2
+          }
+        },
+        {
+          "slotId": "product-teaser",
+          "sourceKind": "image-fragment",
+          "referenceId": "fragment-13143b7437ff2747",
+          "targetComponent": "제품 라인업 미리보기 카드 — 급여코드 및 수탁 태그",
+          "targetSelector": ".product-teaser",
+          "taskIds": [
+            "product-teaser"
+          ],
+          "reason": "The source's short all-caps category label above each card title is the same anatomy the current product card already half-implements, and it sequences a named trust strip immediately after the hero rather than deferring proof.",
+          "take": [
+            "structure",
+            "rhythm"
+          ],
+          "avoid": "Do not import the source's fintech capability names or its partner-logo strip; only the label-above-title card anatomy and its sequencing position transfer.",
+          "adaptation": "Use the real reimbursement codes and consignment-supply tags already on the product catalog as the card's proof line instead of a generic feature description.",
+          "grid": {
+            "column": 1,
+            "span": 12,
+            "order": 3
+          }
+        },
+        {
+          "slotId": "process-steps",
+          "sourceKind": "image-fragment",
+          "referenceId": "fragment-375ae456307ddece",
+          "targetComponent": "수탁 정산 방식 4단계 프로세스 스트립",
+          "targetSelector": ".process-steps",
+          "taskIds": [
+            "process-steps"
+          ],
+          "reason": "The source proves that a plain numbered horizontal process strip can carry real operational credibility at a confident visual scale, matching the existing four-step consignment settlement flow that currently has no home-page presence at all.",
+          "take": [
+            "structure",
+            "density"
+          ],
+          "avoid": "Do not import the source's manufacturing step content, its testimonial quotes, or its closing counter motif.",
+          "adaptation": "Restate the four real steps already written for the consignment settlement model, one numeral plus short label per step.",
+          "grid": {
+            "column": 1,
+            "span": 12,
+            "order": 4
+          }
+        },
+        {
+          "slotId": "cta-disambiguation",
+          "sourceKind": "image-fragment",
+          "referenceId": "fragment-13143b7437ff2747",
+          "targetComponent": "다음 행동 분기 — 회사소개 및 제품소개 및 문의하기",
+          "targetSelector": ".cta-grid",
+          "taskIds": [
+            "cta-disambiguation"
+          ],
+          "reason": "The source's hairline-divider institutional anatomy and single restrained accent line give a model for a closing choice band that avoids two visually equal filled panels.",
+          "take": [
+            "rhythm",
+            "proportion"
+          ],
+          "avoid": "Do not import the source's own product names or its newsletter subscription form.",
+          "adaptation": "Break the current two equal-weight navy and blue CTA cards into a clearly primary About-us path with Products and Contact as visually secondary options, matching the hero's already-encoded primary and outline button hierarchy.",
+          "grid": {
+            "column": 1,
+            "span": 12,
+            "order": 5
+          }
+        }
+      ]
+    },
+    {
+      "id": "domain-adjacent-credibility",
+      "label": "Domain-adjacent credibility",
+      "route": "/",
+      "rationale": "Leans on the direct healthcare consignment functional analog and the private-equity plain-fact regulatory pattern: a dated operating-history hero numeral, a named-partner proof strip, and registration numbers stated as plain undecorated fact rather than dramatized badges.",
+      "pieces": [
+        {
+          "slotId": "hero-signature-moment",
+          "sourceKind": "image-fragment",
+          "referenceId": "fragment-6b69eef8eebe5414",
+          "targetComponent": "히어로 시그니처 모먼트 — 운영 이력 수치 중심",
+          "targetSelector": ".hero",
+          "taskIds": [
+            "hero"
+          ],
+          "reason": "A healthcare consignment and vendor-managed-inventory vendor leading with a dated deployment-history numeral is the closest functional analog to leading with a dated partner-hospital count instead of an adjective claim.",
+          "take": [
+            "structure",
+            "rhythm"
+          ],
+          "avoid": "Do not import the source's RFID product terminology or its own device-count figure.",
+          "adaptation": "Lead the hero with UNIENS' own real partner-hospital count and founding year rather than the current trust and partnership captions.",
+          "grid": {
+            "column": 1,
+            "span": 12,
+            "order": 0
+          }
+        },
+        {
+          "slotId": "proof-strip",
+          "sourceKind": "image-fragment",
+          "referenceId": "fragment-74f5500772fbebc8",
+          "targetComponent": "인증・허가 타임라인 프루프 스트립",
+          "targetSelector": ".proof-strip",
+          "taskIds": [
+            "proof-strip"
+          ],
+          "reason": "The same numeric-plus-narrative dated timeline anatomy remains the strongest available model for the license and patent and GMP history regardless of which hero direction is chosen.",
+          "take": [
+            "density",
+            "structure"
+          ],
+          "avoid": "Do not import the source's own client-services subject matter or its twelve-stop density.",
+          "adaptation": "Compress to the five real dated UNIENS milestones, pairing each with its actual registration number.",
+          "grid": {
+            "column": 1,
+            "span": 12,
+            "order": 1
+          }
+        },
+        {
+          "slotId": "product-teaser",
+          "sourceKind": "image-fragment",
+          "referenceId": "fragment-6b69eef8eebe5414",
+          "targetComponent": "제품 라인업 미리보기 — 실사용 사례 중심",
+          "targetSelector": ".product-teaser",
+          "taskIds": [
+            "product-teaser"
+          ],
+          "reason": "The source names its exact serviced use cases instead of describing its business model abstractly, which is the model for naming the real product categories and reimbursement codes rather than a generic feature description.",
+          "take": [
+            "rhythm"
+          ],
+          "avoid": "Do not import the source's own RFID hardware categories or its client-logo strip content.",
+          "adaptation": "Name the real product categories and reimbursement codes and consignment-supply tags already on the catalog as the card proof line.",
+          "grid": {
+            "column": 1,
+            "span": 12,
+            "order": 2
+          }
+        },
+        {
+          "slotId": "process-steps",
+          "sourceKind": "image-fragment",
+          "referenceId": "fragment-033292f3b1f87c91",
+          "targetComponent": "수탁 정산 방식 4단계 프로세스 스트립",
+          "targetSelector": ".process-steps",
+          "taskIds": [
+            "process-steps"
+          ],
+          "reason": "The source's one-claim-per-screen restraint argues for isolating the settlement flow into its own uncluttered section rather than blending it into other claims.",
+          "take": [
+            "density"
+          ],
+          "avoid": "Do not import the source's own private-equity subject matter or its footer-only placement.",
+          "adaptation": "Give the four real consignment settlement steps their own dedicated section with no competing claim sharing the screen.",
+          "grid": {
+            "column": 1,
+            "span": 12,
+            "order": 3
+          }
+        },
+        {
+          "slotId": "cta-disambiguation",
+          "sourceKind": "image-fragment",
+          "referenceId": "fragment-033292f3b1f87c91",
+          "targetComponent": "다음 행동 분기 — 등록번호 병기형 마무리",
+          "targetSelector": ".cta-grid",
+          "taskIds": [
+            "cta-disambiguation"
+          ],
+          "reason": "Stating a registration number as plain undecorated fact text rather than a dramatized badge is the model for a closing band that pairs the CTA choice with a real credential reference instead of two decorative equal panels.",
+          "take": [
+            "proportion"
+          ],
+          "avoid": "Do not import the source's own fund-disclosure document names or its Danish regulator identity.",
+          "adaptation": "Pair the primary About-us CTA with a small plain-text reference to the real license numbers, keeping Products and Contact as clearly secondary.",
+          "grid": {
+            "column": 1,
+            "span": 12,
+            "order": 4
+          }
+        }
+      ]
+    }
+  ]
+}
